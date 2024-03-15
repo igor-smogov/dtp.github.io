@@ -93,7 +93,7 @@ img {
   max-width: -moz-fit-content;
   max-width: fit-content;
 }
-@media (max-width: 1340px) {
+@media (max-width: 1024px) {
   .image-fit {
     width: 100%;
   }
@@ -205,6 +205,7 @@ a {
 }
 .main-block__info {
   width: 414px;
+  padding-top: 96px;
 }
 .main-block__picture {
   position: absolute;
@@ -216,14 +217,15 @@ a {
 @media (max-width: 1340px) {
   .main-block {
     width: 960px;
-    min-height: auto;
   }
 }
 @media (max-width: 1024px) {
   .main-block {
     width: 100%;
+    min-height: auto;
   }
   .main-block__info {
+    padding-top: 0;
     width: 100%;
     text-align: center;
     padding: 14px;
