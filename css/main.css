@@ -214,6 +214,14 @@ a {
   -webkit-filter: drop-shadow(-24px 0px 64px rgba(0, 0, 0, 0.03));
   filter: drop-shadow(-24px 0px 64px rgba(0, 0, 0, 0.03));
 }
+.main-block__picture img {
+  height: 581px;
+}
+@media (max-width: 1024px) {
+  .main-block__picture img {
+    height: auto;
+  }
+}
 @media (max-width: 1340px) {
   .main-block {
     width: 960px;
@@ -383,6 +391,9 @@ a {
   position: relative;
   padding-top: 124px;
 }
+.project img {
+  width: 680px;
+}
 @media (max-width: 576px) {
   .project {
     padding-top: 48px;
@@ -410,11 +421,25 @@ a {
 }
 .project__steps__info {
   width: 100%;
+  padding-left: 72px;
+}
+.project__steps__info h2 {
+  text-align: left;
+}
+@media (max-width: 1024px) {
+  .project__steps__info {
+    padding-left: 0;
+    width: 340px;
+    margin: 0 auto;
+  }
 }
 @media (max-width: 576px) {
   .project__steps {
     padding-left: 14px;
     padding-right: 14px;
+  }
+  .project__steps__info {
+    width: 280px;
   }
 }
 .project__performance {
@@ -911,7 +936,12 @@ a {
   }
 }
 .button_blue {
+  position: relative;
+  display: table;
+  overflow: hidden;
+  text-align: center;
   height: 56px;
+  line-height: 56px;
   padding: 0 60px;
   border: none;
   color: #fff;
@@ -922,15 +952,33 @@ a {
   -webkit-transition: all 850ms ease-in-out;
   transition: all 850ms ease-in-out;
 }
+.button_blue:after {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -75px;
+  width: 50px;
+  height: 155px;
+  background: #d6d3d3;
+  opacity: 0.1;
+  -webkit-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  transform: rotate(35deg);
+  -webkit-transition: all 850ms cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 850ms cubic-bezier(0.19, 1, 0.22, 1);
+}
 @media (any-hover: hover) {
   .button_blue:hover:hover {
-    background-color: #0d1e38;
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+  .button_blue:hover:hover:after {
+    left: 120%;
   }
   .button_blue:hover:active {
-    -webkit-box-shadow: 0px 12px 24px 0px rgba(23, 119, 255, 0);
-    box-shadow: 0px 12px 24px 0px rgba(23, 119, 255, 0);
+    border-color: #5c5c5c;
   }
 }
+
 .list {
   margin: 0;
   padding: 0;
